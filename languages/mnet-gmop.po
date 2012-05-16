@@ -1,0 +1,481 @@
+# Copyright (C) 2011 MELONIQ.NET
+# This file is distributed under the same license as the GMOP package.
+msgid ""
+msgstr ""
+"Project-Id-Version: GMOP 1.0.0\n"
+"Report-Msgid-Bugs-To: http://blog.meloniq.net/\n"
+"POT-Creation-Date: 2011-06-07 20:02:35+00:00\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: mnet-gmaps-objects-plus/admin/main_overview.php:5
+msgid "1) Go to Settings tab and generate new Google Maps API key for Your domain."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_overview.php:6
+msgid "2) Go to Object Types tab. You will find there 3 preinstalled object types, remove, modify or add new types which You wanna use."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_overview.php:7
+msgid "3) Go to Objects tab. You will find there 3 preinstaled objects, remove, modify or add new which You wanna show on maps."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_overview.php:8
+msgid "4) When You will finish with objects, click ReGenerate Cache button in the top of page. Cache file of objects will be re-generated. <br />Note: cache folder inside plugin dir MUST have writing permission."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_overview.php:9
+msgid "5) Open template file where You wanna include maps (eg. single.php or loop-single.php) and in prepared place for map add below code:"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Action"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:231
+msgid "Add Image"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:71
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:24
+msgid "Add New"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:304
+#: mnet-gmaps-objects-plus/admin/object_manage.php:365
+msgid "Add New Object"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:155
+msgid "Add New Object Type"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:133
+msgid "Add Object Type"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:231
+msgid "Address not found!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Are you sure you want to delete object type?"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Are you sure you want to delete object?"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Ascending"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:127
+msgid "Below You can create new object type (marker), which can be used to mark some objects on google map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:298
+msgid "Below You can create new object, which can be show on google map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:209
+msgid "Below You can edit already created object type (marker), which can be used to mark some objects on google map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:545
+msgid "Below You can edit object, which can be show on google map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:25
+msgid "Below You will find a list of already created object types (markers), which can be used to mark some objects on google map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:73
+msgid "Below You will find a list of already created objects, which can be show on google map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_overview.php:19
+msgid "By variable $base_address You need to pass address in format \"Street, City, Postal Code, Country\"."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Cache was not updated! No objects found!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Cache was updated!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:607
+msgid "Choose one of available object types (markers)."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:103
+msgid "Default latitude"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:107
+msgid "Default latitude on add object page."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:112
+msgid "Default longitude"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:116
+msgid "Default longitude on add object page."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Delete"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Descending"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:567
+msgid "Describe this object, write something more about it."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_manage.php:565
+msgid "Description"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:571
+msgid "Destination URL"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "Distance"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Edit"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:552
+msgid "Edit Object"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:216
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:238
+msgid "Edit Object Type"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "GMOP"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:297
+msgid "GMOP Add New Object"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:126
+msgid "GMOP Add Object Type"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:66
+msgid "GMOP Database Version: "
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:544
+msgid "GMOP Edit Object"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:208
+msgid "GMOP Edit Object Type"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:24
+msgid "GMOP Object Types"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:71
+msgid "GMOP Objects"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "GMOP Overview"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:636
+msgid "GMOP ReGenerate Objects Cache"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:23
+msgid "GMOP Settings"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:65
+msgid "GMOP Version: "
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_install.php:1
+msgid "General secondary school"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:80
+msgid "Get free API key for"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:561
+msgid "Give a name to this object (eg. Primary School no 112)."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:225
+msgid "Give a name to this object type (eg. Bank, School, Library etc.)."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:80
+msgid "Google Maps"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:76
+msgid "Google Maps API Key"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:85
+msgid "Google Maps Location"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_install.php:1
+msgid "High school"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_install.php:1
+msgid "Higher school of Journalism"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_overview.php:4
+msgid "How to start using this plugin?"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "ID"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Image"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:229
+msgid "Image URL"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:577
+msgid "Latitude"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:583
+msgid "Longitude"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Marker"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_install.php:1
+msgid "Middle school"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Move Down"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Move Up"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:192
+#: mnet-gmaps-objects-plus/admin/object_manage.php:439
+msgid "Move marker"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:192
+#: mnet-gmaps-objects-plus/admin/object_manage.php:439
+msgid "Move this marker to right place"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_manage.php:559
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:223
+msgid "Name"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:276
+msgid "Nearby objects"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "New object created."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "New object type created."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "New object type was not created!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "New object was not created!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "No object types found."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "No object types found. Create some first"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "No objects found."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "No!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "Object Types"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Object deleted."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "Object name"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Object type deleted."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Object type moved down."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Object type moved up."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Object type updated."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Object type was not updated!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:589
+msgid "Object type/Marker"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Object updated."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "Object was not updated!"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "Objects"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:1
+msgid "Options updated"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Order"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:121
+msgid "Page:"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:637
+msgid "Please wait, generating cache of objects in progress..."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:63
+msgid "Plugin Info"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_install.php:1
+msgid "Primary school"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:573
+msgid "Provide a URL to website where user may find more information about this object."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:72
+msgid "ReGenerate Cache"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/main_options.php:124
+msgid "Save Options"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:350
+msgid "Settings"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:126
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:208
+msgid "Show Object Types"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:297
+#: mnet-gmaps-objects-plus/admin/object_manage.php:544
+#: mnet-gmaps-objects-plus/admin/object_manage.php:636
+msgid "Show Objects"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/mnet-gmaps-objects-plus.php:267
+msgid "Sorry, Google Maps API is not compatible with Your Web Browser"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:579
+msgid "Type here latitude of object or mark point on below map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:585
+msgid "Type here longitude of object or mark point on below map."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+msgid "URL"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:614
+msgid "Update Object"
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:232
+msgid "Upload image or paste image url."
+msgstr ""
+
+#: mnet-gmaps-objects-plus/admin/object_manage.php:675
+#: mnet-gmaps-objects-plus/admin/object_type_manage.php:241
+msgid "Yes"
+msgstr ""
+
