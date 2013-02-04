@@ -44,7 +44,7 @@ if ( ! defined( 'GMOP_PLUGIN_URL' ) )
 /**
  * Load Text-Domain
  */
-load_plugin_textdomain( 'mnet-gmop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+load_plugin_textdomain( 'gmop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 /**
  * Initialize admin menu, shortcode, styles, scripts
