@@ -4,7 +4,7 @@ if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You 
 // creates all tables for the plugin called during register_activation hook
 
 function gmop_install_tables ($gmop_dbversion) {	
-   	global $wpdb;
+	 	global $wpdb;
 	$installed_db = get_option('gmop_db_version');
 	
 	
@@ -29,7 +29,7 @@ function gmop_install_tables ($gmop_dbversion) {
 					title varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 					image_url text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 					priority int(3) NOT NULL default '0',
-					PRIMARY KEY  (ID)
+					PRIMARY KEY	(ID)
 				) $charset_collate;
 				CREATE TABLE {$wpdb->prefix}gmop_objects (
 					ID int(5) unsigned NOT NULL auto_increment,
@@ -39,13 +39,13 @@ function gmop_install_tables ($gmop_dbversion) {
 					latitude text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 					longitude text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 					marker int(3) NOT NULL default '0',
-					PRIMARY KEY  (ID)
+					PRIMARY KEY	(ID)
 				) $charset_collate;
-        ";
+				";
 //					priority int(3) NOT NULL default '0',
 		dbDelta($sql);
 
-	  $icon_url = get_option('home') . "/wp-content/plugins/mnet-gmaps-objects-plus/img/";
+		$icon_url = get_option('home') . "/wp-content/plugins/mnet-gmaps-objects-plus/img/";
 		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('".__('Primary school','mnet-gmop')."', '".$icon_url."icon_school_elementary.png')";
 		dbDelta($sql);
 		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('".__('Middle school','mnet-gmop')."', '".$icon_url."icon_school_middle.png')";

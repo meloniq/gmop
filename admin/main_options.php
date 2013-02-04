@@ -32,30 +32,30 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 	<?php 
 	}
 	$gmaps_domains = array( 'http://maps.google.com', 
-                          'http://maps.google.at',
-                          'http://maps.google.com.au',
-                          'http://maps.google.com.ba',
-                          'http://maps.google.be',
-                          'http://maps.google.com.br',
-                          'http://maps.google.ca',
-                          'http://maps.google.ch',
-                          'http://maps.google.cz',
-                          'http://maps.google.de',
-                          'http://maps.google.dk',
-                          'http://maps.google.es',
-                          'http://maps.google.fi',
-                          'http://maps.google.fr',
-                          'http://maps.google.it',
-                          'http://maps.google.co.jp',
-                          'http://maps.google.nl',
-                          'http://maps.google.no',
-                          'http://maps.google.co.nz',
-                          'http://maps.google.pl',
-                          'http://maps.google.ru',
-                          'http://maps.google.se',
-                          'http://maps.google.tw',
-                          'http://maps.google.co.uk'
-                          );
+													'http://maps.google.at',
+													'http://maps.google.com.au',
+													'http://maps.google.com.ba',
+													'http://maps.google.be',
+													'http://maps.google.com.br',
+													'http://maps.google.ca',
+													'http://maps.google.ch',
+													'http://maps.google.cz',
+													'http://maps.google.de',
+													'http://maps.google.dk',
+													'http://maps.google.es',
+													'http://maps.google.fi',
+													'http://maps.google.fr',
+													'http://maps.google.it',
+													'http://maps.google.co.jp',
+													'http://maps.google.nl',
+													'http://maps.google.no',
+													'http://maps.google.co.nz',
+													'http://maps.google.pl',
+													'http://maps.google.ru',
+													'http://maps.google.se',
+													'http://maps.google.tw',
+													'http://maps.google.co.uk'
+													);
 	?>	
 	<div id="poststuff">	
 		<div id="postdiv" class="postarea">			
@@ -76,26 +76,26 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 					<h3 class="hndle"><span><?php _e('Google Maps API Key','mnet-gmop') ?></span></h3>
 					<div class="inside">
 						<input type="text" name="gmop_api_key" id="gmop_api_key" value="<?php echo $gmop_api_key; ?>" style="min-width:500px;" />
-            <br />
-            <small><?php _e('Get free API key for','mnet-gmop') ?> <a href="http://code.google.com/apis/maps/signup.html" target="_new" title=""><?php _e('Google Maps','mnet-gmop') ?></a>.</small> 
+						<br />
+						<small><?php _e('Get free API key for','mnet-gmop') ?> <a href="http://code.google.com/apis/maps/signup.html" target="_new" title=""><?php _e('Google Maps','mnet-gmop') ?></a>.</small> 
 					</div><!-- inside ends -->
 				</div><!-- postbox ends -->									
 
 				<div class="postbox">
 					<h3 class="hndle"><span><?php _e('Google Maps Location','mnet-gmop') ?></span></h3>
 					<div class="inside">
-            <select name="gmop_gmaps_loc" id="gmop_gmaps_loc">
-            <?php 
-            foreach($gmaps_domains as $key){
-              if($key == $gmop_gmaps_loc){ 
-                $selected = 'selected="selected"'; 
-              }else{ 
-                $selected = ''; 
-              }
-              echo '<option value="'.$key.'" '.$selected.'>'.$key.'</option>';
-            } 
-            ?>
-            </select>
+						<select name="gmop_gmaps_loc" id="gmop_gmaps_loc">
+						<?php 
+						foreach($gmaps_domains as $key){
+							if($key == $gmop_gmaps_loc){ 
+								$selected = 'selected="selected"'; 
+							}else{ 
+								$selected = ''; 
+							}
+							echo '<option value="'.$key.'" '.$selected.'>'.$key.'</option>';
+						} 
+						?>
+						</select>
 					</div><!-- inside ends -->
 				</div><!-- postbox ends -->									
 
@@ -103,8 +103,8 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 					<h3 class="hndle"><span><?php _e('Default latitude','mnet-gmop') ?></span></h3>
 					<div class="inside">
 						<input type="text" name="gmop_default_latitude" id="gmop_default_latitude" value="<?php echo $gmop_default_latitude; ?>" style="min-width:500px;" />
-            <br />
-            <small><?php _e('Default latitude on add object page.','mnet-gmop') ?></small> 
+						<br />
+						<small><?php _e('Default latitude on add object page.','mnet-gmop') ?></small> 
 					</div><!-- inside ends -->
 				</div><!-- postbox ends -->									
 
@@ -112,8 +112,8 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 					<h3 class="hndle"><span><?php _e('Default longitude','mnet-gmop') ?></span></h3>
 					<div class="inside">
 						<input type="text" name="gmop_default_longitude" id="gmop_default_longitude" value="<?php echo $gmop_default_longitude; ?>" style="min-width:500px;" />
-            <br />
-            <small><?php _e('Default longitude on add object page.','mnet-gmop') ?></small> 
+						<br />
+						<small><?php _e('Default longitude on add object page.','mnet-gmop') ?></small> 
 					</div><!-- inside ends -->
 				</div><!-- postbox ends -->									
 
