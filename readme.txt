@@ -1,23 +1,43 @@
 === GMOP Google Maps Objects Plus ===
-Contributors: meloniq, meloniq.net
+Contributors: meloniq
+Donate link: http://blog.meloniq.net/donate/
 Tags: google maps, objects, markers, distance
-Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: 1.0.0
-License: 
+Requires at least: 3.3
+Tested up to: 3.5.1
+Stable tag: 1.0
 
-Showing maps based on location saved in post meta with closest objects definied in administration panel. Developed by <a href="http://www.meloniq.net">MELONIQ.NET</a>.
+Showing maps based on location saved in post meta with closest objects definied in administration panel.
 
 == Description ==
 
-Showing maps based on location saved in post meta with closest objects definied in administration panel. Developed by <a href="http://www.meloniq.net">MELONIQ.NET</a>.
+Showing maps based on location saved in post meta with closest objects definied in administration panel.
 
 == Installation ==
 
-Upload the GMOP plugin to your blog, Activate it, then go to GMOP tab and read instruction how to start using it.
+1. Upload the folder 'gmop' to the '/wp-content/plugins/' directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Go to "Settings->GMOP" menu and read instruction how to start using it..
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.1 =
+* Changed to use Google Maps API v3 ?!
 
+= 1.0 =
 * Initial release
+
+== Upgrade Notice ==
+
+
+== Frequently Asked Questions ==
+
+= Plugin doesn't work for me, what to do? =
+
+Report it with details on <a href="http://wordpress.org/tags/gmop">support forum</a>.
+
+
+== Screenshots ==
+
+1. View from WordPress backend
+
+
