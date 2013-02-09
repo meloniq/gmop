@@ -2,6 +2,22 @@
 
 
 /**
+ * Calculates distance between two coordinates
+ *
+ * @param float $lat1 The latitude of first object
+ * @param float $lon1 The longitude of first object
+ * @param float $lat2 The latitude of second object
+ * @param float $lon2 The longitude of second object
+ *
+ * @return float The distance
+ */
+function gmop_distance( $lat1, $lon1, $lat2, $lon2 ) {
+	$distance = ( 3958 * 3.1415926 * sqrt( ( $lat2 - $lat1 ) * ( $lat2 - $lat1 ) + cos( $lat2 / 57.29578 ) * cos( $lat1 / 57.29578 ) * ( $lon2 - $lon1 ) * ( $lon2 - $lon1 ) ) / 180 );
+	return $distance;
+}
+
+
+/**
  * Creates database tables
  */
 function gmop_tables_install() {

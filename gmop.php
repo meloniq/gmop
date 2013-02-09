@@ -394,9 +394,3 @@ function gmop_map($postid, $base_address, $base_title) {
 }
 
 
-// Calculate distance between two coordinates
-function gmop_distance($lat1, $lon1, $lat2, $lon2) {
-	$distance = (3958*3.1415926*sqrt(($lat2-$lat1)*($lat2-$lat1) + cos($lat2/57.29578)*cos($lat1/57.29578)*($lon2-$lon1)*($lon2-$lon1))/180);
-	return $distance;
-}
-?>
