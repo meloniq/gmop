@@ -3,14 +3,15 @@ if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You 
 
 // creates all tables for the plugin called during register_activation hook
 
-function gmop_install_tables ($gmop_dbversion) {	
-	 	global $wpdb;
-	$installed_db = get_option('gmop_db_version');
-	
-	
+function gmop_install_tables() {
+	global $wpdb;
+	$previous_version = get_option('gmop_version');
+
+
 	// Check for capability
-	if ( !current_user_can('activate_plugins') ) return;
-	
+	if ( ! current_user_can( 'activate_plugins' ) )
+		return;
+
 	// add charset & collate like wp core
 	$charset_collate = '';
 
@@ -21,7 +22,7 @@ function gmop_install_tables ($gmop_dbversion) {
 			$charset_collate .= " COLLATE $wpdb->collate";
 	}
 	
-	if(($gmop_dbversion != $installed_db) || (empty($installed_db))) {
+	if ( ! $previous_version ) {
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 
 		$sql = "CREATE TABLE {$wpdb->prefix}gmop_markers (
@@ -60,7 +61,7 @@ function gmop_install_tables ($gmop_dbversion) {
 		$sql = "INSERT INTO {$wpdb->prefix}gmop_objects (title, description, url, latitude, longitude, marker) VALUES ('".__('Higher school of Journalism','mnet-gmop')."', 'im. M. Wańkowicza Nowy Świat 58, Warszawa', 'http://www.wsd.edu.pl/', '52.235474', '21.018691', '3')";
 		dbDelta($sql);
 
-		update_option( "gmop_db_version", $gmop_dbversion );
+		update_option( 'gmop_version', GMOP_VERSION );
 	}
 
 	$options = get_option('gmop_options');

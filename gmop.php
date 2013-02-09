@@ -4,7 +4,7 @@
 	Plugin URI: http://blog.meloniq.net/downloads/gmaps-objects-plus/
 	Description: Showing maps based on location saved in post meta with closest objects definied in administration panel. Developed by <a href="http://www.meloniq.net">MELONIQ.NET</a>.
 	Author: MELONIQ.NET
-	Version: 1.0.0
+	Version: 1.0
 	Author URI: http://blog.meloniq.net
 */
 
@@ -16,12 +16,17 @@ if ( ! function_exists( 'add_action' ) )
 	die( 'Whoops! You shouldn\'t be doing that.' );
 
 
-global $gmop_dbversion;
-$gmop_version = '1.0.0';
-define('GMOP_VERSION', '1.0.0');
-$gmop_dbversion = '100';
-// Init options & tables during activation & deregister init option
-register_activation_hook( plugin_basename(__FILE__), 'gmop_activate' );
+/**
+ * Plugin version and textdomain constants
+ */
+define( 'GMOP_VERSION', '1.0' );
+define( 'GMOP_TD', 'gmop' );
+
+
+/**
+ * Process actions on plugin activation
+ */
+register_activation_hook( plugin_basename( __FILE__ ), 'gmop_activate' );
 	
 	
 /**
@@ -114,13 +119,13 @@ function gmop_menu_overview_page() {
 	include_once (dirname (__FILE__) . '/admin/main_overview.php');
 }
 
+
 /**
  * Create GMOP main page content
  */
 function gmop_activate() {
-	global $wpdb, $gmop_dbversion;
-	include_once (dirname (__FILE__) . '/admin/main_install.php');
-	gmop_install_tables($gmop_dbversion);
+	include_once( dirname( __FILE__ ) . '/admin/main_install.php' );
+	gmop_install_tables();
 }
 		
 /**
