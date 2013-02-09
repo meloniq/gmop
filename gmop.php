@@ -99,10 +99,10 @@ function gmop_shortcode(	) {
  */
 function gmop_add_menu_links() {
 	global $wp_version, $_registered_pages;
-	add_menu_page( __('GMOP Overview', 'mnet-gmop'),__('GMOP', 'mnet-gmop'), 'activate_plugins', 'gmop_main', 'gmop_menu_overview_page'	);
-	add_submenu_page('gmop_main', __('Objects', 'mnet-gmop'), __('Objects', 'mnet-gmop'), 'administrator', '/admin/object_manage.php');
-	add_submenu_page('gmop_main', __('Object Types', 'mnet-gmop'), __('Object Types', 'mnet-gmop'), 'administrator', '/admin/object_type_manage.php');
-	add_submenu_page('gmop_main', __('Settings', 'mnet-gmop'), __('Settings', 'mnet-gmop'), 'administrator', '/admin/main_options.php');
+	add_menu_page( __( 'GMOP Overview', GMOP_TD ), __( 'GMOP', GMOP_TD ), 'activate_plugins', 'gmop_main', 'gmop_menu_overview_page'	);
+	add_submenu_page('gmop_main', __( 'Objects', GMOP_TD ), __( 'Objects', GMOP_TD ), 'administrator', '/admin/object_manage.php');
+	add_submenu_page('gmop_main', __( 'Object Types', GMOP_TD ), __( 'Object Types', GMOP_TD ), 'administrator', '/admin/object_type_manage.php');
+	add_submenu_page('gmop_main', __( 'Settings', GMOP_TD ), __( 'Settings', GMOP_TD ), 'administrator', '/admin/main_options.php');
 			// Register the pages to WP
 	$code_pages = array('object_manage.php','object_type_manage.php', 'main_options.php');
 	foreach($code_pages as $code_page) {
@@ -241,7 +241,7 @@ function gmop_map($postid, $base_address, $base_title) {
 <?php
 	if (!$geocode) {
 ?>
-					document.getElementById("map_canvas").innerHTML = "<p style='font-family:Arial; font-size:75%;'>" + address + " <strong><?php _e('Address not found!','mnet-gmop'); ?></strong></p>";
+					document.getElementById("map_canvas").innerHTML = "<p style='font-family:Arial; font-size:75%;'>" + address + " <strong><?php _e( 'Address not found!', GMOP_TD ); ?></strong></p>";
 <?php 
 	} 
 ?>
@@ -284,7 +284,7 @@ function gmop_map($postid, $base_address, $base_title) {
 
 
 				}else {
-					alert("<?php _e('Sorry, Google Maps API is not compatible with Your Web Browser','mnet-gmop'); ?>");
+					alert("<?php _e( 'Sorry, Google Maps API is not compatible with Your Web Browser', GMOP_TD ); ?>");
 				} 
 			//]]>
 		</script>
@@ -293,7 +293,7 @@ function gmop_map($postid, $base_address, $base_title) {
 <div id="gmop_nearby_objects">
 	<div class="clearfix">
 		<div class="header">
-			<h2><?php _e('Nearby objects','mnet-gmop'); ?></h2>
+			<h2><?php _e( 'Nearby objects', GMOP_TD ); ?></h2>
 		</div>
 		<div id="gmop_list_tab_set">
 <?php
@@ -323,7 +323,7 @@ function gmop_map($postid, $base_address, $base_title) {
 			if($i){ $tabstyle = "none"; }else{ $tabstyle = "block"; }
 			echo '<div style="display: ' . $tabstyle . ';" id="block' . $gmoptype->ID . '_tab_content">';
 			echo '<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>';
-			echo '<tr> <th width="80%" class="first">' . __('Object name', 'mnet-gmop') . '</th> <th width="20%" align="center">' . __('Distance', 'mnet-gmop') . '</th> </tr>';
+			echo '<tr> <th width="80%" class="first">' . __( 'Object name', GMOP_TD ) . '</th> <th width="20%" align="center">' . __( 'Distance', GMOP_TD ) . '</th> </tr>';
 
 			$markerid = $gmoptype->ID;
 			$gmopobjects = $wpdb->get_results("SELECT * FROM $objecttable_name WHERE marker = '$markerid' AND (latitude BETWEEN $gmop_latitude_minus AND $gmop_latitude_plus ) AND (longitude BETWEEN $gmop_longitude_minus AND $gmop_longitude_plus ) ORDER BY ID ASC LIMIT 5", OBJECT);
@@ -335,7 +335,7 @@ function gmop_map($postid, $base_address, $base_title) {
 					echo '<tr><td class="comment" colspan="2">' . $gmopobject->description . '</td></tr>';
 				}			
 			}else{
-				echo '<tr><td class="comment" colspan="2">' . __('No objects found.', 'mnet-gmop') . '</td></tr>';
+				echo '<tr><td class="comment" colspan="2">' . __( 'No objects found.', GMOP_TD ) . '</td></tr>';
 			}
 
 			echo '</tbody></table>';

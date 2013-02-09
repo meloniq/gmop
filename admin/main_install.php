@@ -47,18 +47,18 @@ function gmop_install_tables() {
 		dbDelta($sql);
 
 		$icon_url = get_option('home') . "/wp-content/plugins/mnet-gmaps-objects-plus/img/";
-		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('".__('Primary school','mnet-gmop')."', '".$icon_url."icon_school_elementary.png')";
+		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('" . __( 'Primary school', GMOP_TD ) . "', '".$icon_url."icon_school_elementary.png')";
 		dbDelta($sql);
-		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('".__('Middle school','mnet-gmop')."', '".$icon_url."icon_school_middle.png')";
+		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('" . __( 'Middle school', GMOP_TD ) . "', '".$icon_url."icon_school_middle.png')";
 		dbDelta($sql);
-		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('".__('High school','mnet-gmop')."', '".$icon_url."icon_school_high.png')";
+		$sql = "INSERT INTO {$wpdb->prefix}gmop_markers (title, image_url) VALUES ('" . __( 'High school', GMOP_TD ) . "', '".$icon_url."icon_school_high.png')";
 		dbDelta($sql);
 
-		$sql = "INSERT INTO {$wpdb->prefix}gmop_objects (title, description, url, latitude, longitude, marker) VALUES ('".__('Primary school','mnet-gmop')."', 'Szkoła Podstawowa nr 211 im. J. Korczaka z oddziałami integracyjnymi Nowy Świat 21A Warszawa', 'http://www.sp211.hg.pl/', '52.232268', '21.020542', '1')";
+		$sql = "INSERT INTO {$wpdb->prefix}gmop_objects (title, description, url, latitude, longitude, marker) VALUES ('" . __( 'Primary school', GMOP_TD )."', 'Szkoła Podstawowa nr 211 im. J. Korczaka z oddziałami integracyjnymi Nowy Świat 21A Warszawa', 'http://www.sp211.hg.pl/', '52.232268', '21.020542', '1')";
 		dbDelta($sql);
-		$sql = "INSERT INTO {$wpdb->prefix}gmop_objects (title, description, url, latitude, longitude, marker) VALUES ('".__('General secondary school','mnet-gmop')."', 'Smolna 30, Warszawa', 'http://www.zamoyski.edu.pl/', '52.232938', '21.022811', '2')";
+		$sql = "INSERT INTO {$wpdb->prefix}gmop_objects (title, description, url, latitude, longitude, marker) VALUES ('" . __( 'General secondary school', GMOP_TD )."', 'Smolna 30, Warszawa', 'http://www.zamoyski.edu.pl/', '52.232938', '21.022811', '2')";
 		dbDelta($sql);
-		$sql = "INSERT INTO {$wpdb->prefix}gmop_objects (title, description, url, latitude, longitude, marker) VALUES ('".__('Higher school of Journalism','mnet-gmop')."', 'im. M. Wańkowicza Nowy Świat 58, Warszawa', 'http://www.wsd.edu.pl/', '52.235474', '21.018691', '3')";
+		$sql = "INSERT INTO {$wpdb->prefix}gmop_objects (title, description, url, latitude, longitude, marker) VALUES ('" . __( 'Higher school of Journalism', GMOP_TD )."', 'im. M. Wańkowicza Nowy Świat 58, Warszawa', 'http://www.wsd.edu.pl/', '52.235474', '21.018691', '3')";
 		dbDelta($sql);
 
 		update_option( 'gmop_version', GMOP_VERSION );

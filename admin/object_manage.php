@@ -68,20 +68,20 @@ function gmop_object_show(){
 	}
 ?>
 	<div class="wrap">
-		<h2><?php _e('GMOP Objects','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=add'; ?>" class="button add-new-h2"><?php _e('Add New','mnet-gmop'); ?></a>
-		&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=regenerate'; ?>" class="button add-new-h2"><?php _e('ReGenerate Cache','mnet-gmop'); ?></a></h2>
-		<p class="admin-msg"><?php _e('Below You will find a list of already created objects, which can be show on google map.','mnet-gmop'); ?></p>
-		<p><?php _e('Page:','mnet-gmop'); ?>&nbsp;<?php echo $pagination; ?></p>
+		<h2><?php _e( 'GMOP Objects', GMOP_TD ); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=add'; ?>" class="button add-new-h2"><?php _e( 'Add New', GMOP_TD ); ?></a>
+		&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=regenerate'; ?>" class="button add-new-h2"><?php _e( 'ReGenerate Cache', GMOP_TD ); ?></a></h2>
+		<p class="admin-msg"><?php _e( 'Below You will find a list of already created objects, which can be show on google map.', GMOP_TD ); ?></p>
+		<p><?php _e( 'Page:', GMOP_TD ); ?>&nbsp;<?php echo $pagination; ?></p>
 <?php
 	//Handle deleting
 	if ($_GET['gmopaction'] == "delete") {
 		$theid = $_GET['theid'];
-		echo '<div id="message" class="updated fade"><p>'.__('Are you sure you want to delete object?', 'mnet-gmop').' <a href="admin.php?page=/admin/object_manage.php&gmopaction=deleteconf&theid='.$theid.'">'.__('Yes', 'mnet-gmop').'</a> &nbsp; <a href="admin.php?page=/admin/object_manage.php">'.__('No!', 'mnet-gmop').'</a></p></div>';
+		echo '<div id="message" class="updated fade"><p>' . __( 'Are you sure you want to delete object?', GMOP_TD ) . ' <a href="admin.php?page=/admin/object_manage.php&gmopaction=deleteconf&theid='.$theid.'">' . __( 'Yes', GMOP_TD ) . '</a> &nbsp; <a href="admin.php?page=/admin/object_manage.php">' . __( 'No!', GMOP_TD ) . '</a></p></div>';
 	}
 	if ($_GET['gmopaction'] == "deleteconf") {
 		$theid = $_GET['theid'];
 		$wpdb->query("DELETE FROM $objecttable_name WHERE ID = '$theid'");
-		echo '<div id="message" class="updated fade"><p>' . __('Object deleted.', 'mnet-gmop') . '</p></div>';
+		echo '<div id="message" class="updated fade"><p>' . __( 'Object deleted.', GMOP_TD ) . '</p></div>';
 	}
 
 	$gmopobjects = $wpdb->get_results("SELECT * FROM $objecttable_name ORDER BY $gmopsortby $gmopsort LIMIT $pmin , $pmax", OBJECT);
@@ -90,12 +90,12 @@ function gmop_object_show(){
 	echo '
 	<table class="widefat">
 		<thead><tr>
-			<th scope="col">' . __('ID', 'mnet-gmop') . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=ID&pageno='.$pageno.'"><img src="/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=ID&pageno='.$pageno.'"><img src="/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
-			<th scope="col">' . __('Name', 'mnet-gmop') . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=title&pageno='.$pageno.'"><img src="/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=title&pageno='.$pageno.'"><img src="/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
-			<th scope="col" style="width:300px;">' . __('Description', 'mnet-gmop') . '</th>
-			<th scope="col">' . __('URL', 'mnet-gmop') . '</th>
-			<th scope="col">' . __('Marker', 'mnet-gmop') . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=marker&pageno='.$pageno.'"><img src="/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=marker&pageno='.$pageno.'"><img src="/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
-			<th scope="col">' . __('Action', 'mnet-gmop') . '</th>
+			<th scope="col">' . __( 'ID', GMOP_TD ) . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=ID&pageno='.$pageno.'"><img src="/img/link_up.gif" title="' . __( 'Ascending', GMOP_TD ) . '" alt="' . __( 'Ascending', GMOP_TD ) . '" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=ID&pageno='.$pageno.'"><img src="/img/link_down.gif" title="' . __( 'Descending', GMOP_TD ) . '" alt="' . __( 'Descending', GMOP_TD ) . '" /></a></th>
+			<th scope="col">' . __( 'Name', GMOP_TD ) . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=title&pageno='.$pageno.'"><img src="/img/link_up.gif" title="' . __( 'Ascending', GMOP_TD ) . '" alt="' . __( 'Ascending', GMOP_TD ) . '" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=title&pageno='.$pageno.'"><img src="/img/link_down.gif" title="' . __( 'Descending', GMOP_TD ) . '" alt="' . __( 'Descending', GMOP_TD ) . '" /></a></th>
+			<th scope="col" style="width:300px;">' . __( 'Description', GMOP_TD ) . '</th>
+			<th scope="col">' . __( 'URL', GMOP_TD ) . '</th>
+			<th scope="col">' . __( 'Marker', GMOP_TD ) . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=marker&pageno='.$pageno.'"><img src="/img/link_up.gif" title="' . __( 'Ascending', GMOP_TD ) . '" alt="' . __( 'Ascending', GMOP_TD ) . '" /></a> <a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=marker&pageno='.$pageno.'"><img src="/img/link_down.gif" title="' . __( 'Descending', GMOP_TD ) . '" alt="' . __( 'Descending', GMOP_TD ) . '" /></a></th>
+			<th scope="col">' . __( 'Action', GMOP_TD ) . '</th>
 		</tr></thead>
 		<tbody>';
 
@@ -108,17 +108,17 @@ function gmop_object_show(){
 			echo '<td>' . $gmopobject->url . '</td>';
 			$markerid = $gmopobject->marker;
 			echo '<td><img src="' . $gmoptypes[$markerid]->image_url . '" /><br />' . $gmoptypes[$markerid]->title . '</td>';
-			echo '<td><a href="admin.php?page=/admin/object_manage.php&gmopaction=edit&theid='.$gmopobject->ID.'"><img src="/img/edit.png" title="'.__('Edit', 'mnet-gmop').'" alt="'.__('Edit', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopaction=delete&theid='.$gmopobject->ID.'"><img src="/img/delete.png" title="'.__('Delete', 'mnet-gmop').'" alt="'.__('Delete', 'mnet-gmop').'" /></a></td>';
+			echo '<td><a href="admin.php?page=/admin/object_manage.php&gmopaction=edit&theid='.$gmopobject->ID.'"><img src="/img/edit.png" title="' . __( 'Edit', GMOP_TD ) . '" alt="' . __( 'Edit', GMOP_TD ) . '" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopaction=delete&theid='.$gmopobject->ID.'"><img src="/img/delete.png" title="' . __( 'Delete', GMOP_TD ) . '" alt="' . __( 'Delete', GMOP_TD ) . '" /></a></td>';
 			echo '</tr>';
 		}
 	} else { 
-		echo '<tr> <td colspan="6">'.__('No objects found.', 'mnet-gmop').'</td> </tr>'; 
+		echo '<tr> <td colspan="6">' . __( 'No objects found.', GMOP_TD ) . '</td> </tr>'; 
 	}
 
 	echo '</tbody>
 	</table>';
 ?>
-		<p><?php _e('Page:','mnet-gmop'); ?>&nbsp;<?php echo $pagination; ?></p>
+		<p><?php _e( 'Page:', GMOP_TD ); ?>&nbsp;<?php echo $pagination; ?></p>
 	</div><!-- wrap ends -->
 <?php
 }
@@ -145,9 +145,9 @@ function gmop_object_add(){
 		if(!empty($post_title) && !empty($post_latitude) && !empty($post_longitude) && !empty($post_marker)){
 			$updatedb = "INSERT INTO $objecttable_name (title, description, url, latitude, longitude, marker) VALUES ('$post_title', '$post_description', '$post_url', '$post_latitude', '$post_longitude', '$post_marker')";
 			$results = $wpdb->query($updatedb);
-			echo '<div id="message" class="updated fade"><p>' . __('New object created.','mnet-gmop') . '</p></div>';
+			echo '<div id="message" class="updated fade"><p>' . __( 'New object created.', GMOP_TD ) . '</p></div>';
 		}else{
-			echo '<div id="message" class="updated fade"><p>' . __('New object was not created!','mnet-gmop') . '</p></div>';
+			echo '<div id="message" class="updated fade"><p>' . __( 'New object was not created!', GMOP_TD ) . '</p></div>';
 		}
 	}
 
@@ -189,7 +189,7 @@ function init () {
 	newmap = new mapmaker();
 	newmap.Create();
 
-	newmap.addpoint("<?php echo $gmop_default_latitude; ?>","<?php echo $gmop_default_longitude; ?>","<?php _e('Move marker','mnet-gmop'); ?>","<?php _e('Move this marker to right place','mnet-gmop'); ?>");
+	newmap.addpoint("<?php echo $gmop_default_latitude; ?>","<?php echo $gmop_default_longitude; ?>","<?php _e( 'Move marker', GMOP_TD ); ?>","<?php _e( 'Move this marker to right place', GMOP_TD ); ?>");
 	newmap.editMarker(0);
 };
 
@@ -294,51 +294,51 @@ div#gmop_map {
 }
 </style>
 	<div class="wrap">
-		<h2><?php _e('GMOP Add New Object','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
-		<p class="admin-msg"><?php _e('Below You can create new object, which can be show on google map.','mnet-gmop'); ?></p>
+		<h2><?php _e( 'GMOP Add New Object', GMOP_TD ); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e( 'Show Objects', GMOP_TD ); ?></a></h2>
+		<p class="admin-msg"><?php _e( 'Below You can create new object, which can be show on google map.', GMOP_TD ); ?></p>
 
 		<form method="post" action="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=add'; ?>" enctype="multipart/form-data" name="storageform" id="storageform" >
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th width="200px" scope="col"><?php _e('Add New Object','mnet-gmop'); ?></th>
+					<th width="200px" scope="col"><?php _e( 'Add New Object', GMOP_TD ); ?></th>
 					<th scope="col">&nbsp;</th>
 				</tr>
 			</thead>
 			<tbody>
 
 			<tr>
-				<th scope="row"><?php _e('Name', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Name', GMOP_TD ); ?></th>
 				<td><input name="gmop_title" type="text" id="gmop_title" value="" style="min-width:500px;" />
-				<br /><small><?php _e('Give a name to this object (eg. Primary School no 112).', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Give a name to this object (eg. Primary School no 112).', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Description', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Description', GMOP_TD ); ?></th>
 				<td><textarea style="width:500px;height:150px;" id="gmop_description" name="gmop_description"></textarea>
-				<br /><small><?php _e('Describe this object, write something more about it.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Describe this object, write something more about it.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Destination URL', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Destination URL', GMOP_TD ); ?></th>
 				<td><input name="gmop_url" type="text" id="gmop_url" value="" style="min-width:500px;" />
-				<br /><small><?php _e('Provide a URL to website where user may find more information about this object.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Provide a URL to website where user may find more information about this object.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Latitude', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Latitude', GMOP_TD ); ?></th>
 				<td><input name="gmop_latitude" type="text" id="gmop_latitude" value="<?php echo $gmop_default_latitude; ?>" style="min-width:500px;" />
-				<br /><small><?php _e('Type here latitude of object or mark point on below map.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Type here latitude of object or mark point on below map.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Longitude', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Longitude', GMOP_TD ); ?></th>
 				<td><input name="gmop_longitude" type="text" id="gmop_longitude" value="<?php echo $gmop_default_longitude; ?>" style="min-width:500px;" />
-				<br /><small><?php _e('Type here longitude of object or mark point on below map.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Type here longitude of object or mark point on below map.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Object type/Marker', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Object type/Marker', GMOP_TD ); ?></th>
 				<td>
 <?php
 	if ($gmoptypes) {
@@ -352,17 +352,17 @@ div#gmop_map {
 		}
 		echo '</ul>';
 	} else { 
-		_e('No object types found. Create some first', 'mnet-gmop'); 
+		_e( 'No object types found. Create some first', GMOP_TD ); 
 	}
 ?>
-				<br /><small><?php _e('Choose one of available object types (markers).', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Choose one of available object types (markers).', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<input type="hidden" value="1" class="check" id="lockcheck">
 
 			</tbody>
 		</table>
-		<p class="submit"><input type="submit" name="Submit" value="<?php _e('Add New Object', 'mnet-gmop'); ?>" /> </p>
+		<p class="submit"><input type="submit" name="Submit" value="<?php _e( 'Add New Object', GMOP_TD ); ?>" /> </p>
 		</form>
 
 			<div id="gmop_map"></div>
@@ -394,9 +394,9 @@ function gmop_object_edit(){
 		if(!empty($post_theid) && !empty($post_title) && !empty($post_latitude) && !empty($post_longitude) && !empty($post_marker)){
 			$updatedb = "UPDATE $objecttable_name SET title = '$post_title', description = '$post_description', url = '$post_url', latitude = '$post_latitude', longitude = '$post_longitude', marker = '$post_marker'	WHERE ID = '$post_theid'";
 			$results = $wpdb->query($updatedb);
-			echo '<div id="message" class="updated fade"><p>' . __('Object updated.','mnet-gmop') . '</p></div>';
+			echo '<div id="message" class="updated fade"><p>' . __( 'Object updated.', GMOP_TD ) . '</p></div>';
 		}else{
-			echo '<div id="message" class="updated fade"><p>' . __('Object was not updated!','mnet-gmop') . '</p></div>';
+			echo '<div id="message" class="updated fade"><p>' . __( 'Object was not updated!', GMOP_TD ) . '</p></div>';
 		}
 	}
 
@@ -436,7 +436,7 @@ function init () {
 	newmap = new mapmaker();
 	newmap.Create();
 
-	newmap.addpoint("<?php echo $gmopobject->latitude; ?>","<?php echo $gmopobject->longitude; ?>","<?php _e('Move marker','mnet-gmop'); ?>","<?php _e('Move this marker to right place','mnet-gmop'); ?>");
+	newmap.addpoint("<?php echo $gmopobject->latitude; ?>","<?php echo $gmopobject->longitude; ?>","<?php _e( 'Move marker', GMOP_TD ); ?>","<?php _e( 'Move this marker to right place', GMOP_TD ); ?>");
 	newmap.editMarker(0);
 };
 
@@ -541,52 +541,52 @@ div#gmop_map {
 }
 </style>
 	<div class="wrap">
-		<h2><?php _e('GMOP Edit Object','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
-		<p class="admin-msg"><?php _e('Below You can edit object, which can be show on google map.','mnet-gmop'); ?></p>
+		<h2><?php _e( 'GMOP Edit Object', GMOP_TD ); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e( 'Show Objects', GMOP_TD ); ?></a></h2>
+		<p class="admin-msg"><?php _e( 'Below You can edit object, which can be show on google map.', GMOP_TD ); ?></p>
 
 		<form method="post" action="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=edit&theid='.$theid.''; ?>" enctype="multipart/form-data" name="storageform" id="storageform" >
 		<input name="gmop_theid" type="hidden" id="gmop_theid" value="<?php echo $gmopobject->ID; ?>" />
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th width="200px" scope="col"><?php _e('Edit Object','mnet-gmop'); ?></th>
+					<th width="200px" scope="col"><?php _e( 'Edit Object', GMOP_TD ); ?></th>
 					<th scope="col">&nbsp;</th>
 				</tr>
 			</thead>
 			<tbody>
 
 			<tr>
-				<th scope="row"><?php _e('Name', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Name', GMOP_TD ); ?></th>
 				<td><input name="gmop_title" type="text" id="gmop_title" value="<?php echo $gmopobject->title; ?>" style="min-width:500px;" />
-				<br /><small><?php _e('Give a name to this object (eg. Primary School no 112).', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Give a name to this object (eg. Primary School no 112).', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Description', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Description', GMOP_TD ); ?></th>
 				<td><textarea style="width:500px;height:150px;" id="gmop_description" name="gmop_description"><?php echo $gmopobject->description; ?></textarea>
-				<br /><small><?php _e('Describe this object, write something more about it.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Describe this object, write something more about it.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Destination URL', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Destination URL', GMOP_TD ); ?></th>
 				<td><input name="gmop_url" type="text" id="gmop_url" value="<?php echo $gmopobject->url; ?>" style="min-width:500px;" />
-				<br /><small><?php _e('Provide a URL to website where user may find more information about this object.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Provide a URL to website where user may find more information about this object.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Latitude', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Latitude', GMOP_TD ); ?></th>
 				<td><input name="gmop_latitude" type="text" id="gmop_latitude" value="<?php echo $gmopobject->latitude; ?>" style="min-width:500px;" />
-				<br /><small><?php _e('Type here latitude of object or mark point on below map.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Type here latitude of object or mark point on below map.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Longitude', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Longitude', GMOP_TD ); ?></th>
 				<td><input name="gmop_longitude" type="text" id="gmop_longitude" value="<?php echo $gmopobject->longitude; ?>" style="min-width:500px;" />
-				<br /><small><?php _e('Type here longitude of object or mark point on below map.', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Type here longitude of object or mark point on below map.', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<tr>
-				<th scope="row"><?php _e('Object type/Marker', 'mnet-gmop'); ?></th>
+				<th scope="row"><?php _e( 'Object type/Marker', GMOP_TD ); ?></th>
 				<td>
 <?php
 	if ($gmoptypes) {
@@ -601,17 +601,17 @@ div#gmop_map {
 		}
 		echo '</ul>';
 	} else { 
-		_e('No object types found. Create some first', 'mnet-gmop'); 
+		_e( 'No object types found. Create some first', GMOP_TD );
 	}
 ?>
-				<br /><small><?php _e('Choose one of available object types (markers).', 'mnet-gmop'); ?></small></td>
+				<br /><small><?php _e( 'Choose one of available object types (markers).', GMOP_TD ); ?></small></td>
 			</tr>
 
 			<input type="hidden" value="1" class="check" id="lockcheck">
 
 			</tbody>
 		</table>
-		<p class="submit"><input type="submit" name="Submit" value="<?php _e('Update Object', 'mnet-gmop'); ?>" /> </p>
+		<p class="submit"><input type="submit" name="Submit" value="<?php _e( 'Update Object', GMOP_TD ); ?>" /> </p>
 		</form>
 
 			<div id="gmop_map"></div>
@@ -633,8 +633,8 @@ function gmop_object_regenerate(){
 
 ?>
 	<div class="wrap">
-		<h2><?php _e('GMOP ReGenerate Objects Cache','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
-		<p class="admin-msg"><?php _e('Please wait, generating cache of objects in progress...','mnet-gmop'); ?></p>
+		<h2><?php _e( 'GMOP ReGenerate Objects Cache', GMOP_TD ); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e( 'Show Objects', GMOP_TD ); ?></a></h2>
+		<p class="admin-msg"><?php _e( 'Please wait, generating cache of objects in progress...', GMOP_TD ); ?></p>
 <?php
 
 	$gmopcount_total = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $objecttable_name;"));
@@ -663,9 +663,9 @@ function gmop_object_regenerate(){
 		fclose($file);								# close file
 
 		//echo $gmopfilename;
-		echo '<div id="message" class="updated fade"><p>' . __('Cache was updated!','mnet-gmop') . '</p></div>'; 
+		echo '<div id="message" class="updated fade"><p>' . __( 'Cache was updated!', GMOP_TD ) . '</p></div>'; 
 	} else { 
-		echo '<div id="message" class="updated fade"><p>' . __('Cache was not updated! No objects found!','mnet-gmop') . '</p></div>'; 
+		echo '<div id="message" class="updated fade"><p>' . __( 'Cache was not updated! No objects found!', GMOP_TD ) . '</p></div>';
 	}
 
 

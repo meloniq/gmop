@@ -11,7 +11,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']) {
 	update_option('gmop_gmaps_loc', $gmop_gmaps_loc);
 	update_option('gmop_default_latitude', $gmop_default_latitude);
 	update_option('gmop_default_longitude', $gmop_default_longitude);
-	$message = __('Options updated','mnet-gmop');
+	$message = __( 'Options updated', GMOP_TD );
 }
 $gmop_api_key = get_option('gmop_api_key');
 $gmop_gmaps_loc = get_option('gmop_gmaps_loc');
@@ -20,7 +20,7 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 
 ?>
 <div class="wrap">
-	<h2><?php _e('GMOP Settings','mnet-gmop'); ?></h2>
+	<h2><?php _e( 'GMOP Settings', GMOP_TD ); ?></h2>
 	<?php
 	if (isset($message)) {
 	?>
@@ -60,10 +60,10 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 	<div id="poststuff">	
 		<div id="postdiv" class="postarea">			
 			<div class="postbox">
-				<h3 class="hndle"><span><?php _e('Plugin Info','mnet-gmop') ?></span></h3>
+				<h3 class="hndle"><span><?php _e( 'Plugin Info', GMOP_TD ); ?></span></h3>
 				<div class="inside">
-				<?php echo "<strong>".__('GMOP Version: ','mnet-gmop')."</strong>".GMOP_VERSION; ?><br />
-				<?php echo "<strong>".__('GMOP Database Version: ','mnet-gmop')."</strong>".get_option('gmop_db_version'); ?>
+				<?php echo "<strong>" . __( 'GMOP Version: ', GMOP_TD ) . "</strong>".GMOP_VERSION; ?><br />
+				<?php echo "<strong>" . __( 'GMOP Database Version: ', GMOP_TD ) . "</strong>".get_option('gmop_db_version'); ?>
 				</div><!-- inside ends -->
 			</div><!-- postbox ends -->		
 		</div>
@@ -73,16 +73,16 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 			<div id="postdiv" class="postarea">			
 
 				<div class="postbox">
-					<h3 class="hndle"><span><?php _e('Google Maps API Key','mnet-gmop') ?></span></h3>
+					<h3 class="hndle"><span><?php _e( 'Google Maps API Key', GMOP_TD ); ?></span></h3>
 					<div class="inside">
 						<input type="text" name="gmop_api_key" id="gmop_api_key" value="<?php echo $gmop_api_key; ?>" style="min-width:500px;" />
 						<br />
-						<small><?php _e('Get free API key for','mnet-gmop') ?> <a href="http://code.google.com/apis/maps/signup.html" target="_new" title=""><?php _e('Google Maps','mnet-gmop') ?></a>.</small> 
+						<small><?php _e( 'Get free API key for', GMOP_TD ); ?> <a href="http://code.google.com/apis/maps/signup.html" target="_new" title=""><?php _e( 'Google Maps', GMOP_TD ); ?></a>.</small> 
 					</div><!-- inside ends -->
 				</div><!-- postbox ends -->									
 
 				<div class="postbox">
-					<h3 class="hndle"><span><?php _e('Google Maps Location','mnet-gmop') ?></span></h3>
+					<h3 class="hndle"><span><?php _e( 'Google Maps Location', GMOP_TD ); ?></span></h3>
 					<div class="inside">
 						<select name="gmop_gmaps_loc" id="gmop_gmaps_loc">
 						<?php 
@@ -100,20 +100,20 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 				</div><!-- postbox ends -->									
 
 				<div class="postbox">
-					<h3 class="hndle"><span><?php _e('Default latitude','mnet-gmop') ?></span></h3>
+					<h3 class="hndle"><span><?php _e( 'Default latitude', GMOP_TD ); ?></span></h3>
 					<div class="inside">
 						<input type="text" name="gmop_default_latitude" id="gmop_default_latitude" value="<?php echo $gmop_default_latitude; ?>" style="min-width:500px;" />
 						<br />
-						<small><?php _e('Default latitude on add object page.','mnet-gmop') ?></small> 
+						<small><?php _e( 'Default latitude on add object page.', GMOP_TD ); ?></small> 
 					</div><!-- inside ends -->
 				</div><!-- postbox ends -->									
 
 				<div class="postbox">
-					<h3 class="hndle"><span><?php _e('Default longitude','mnet-gmop') ?></span></h3>
+					<h3 class="hndle"><span><?php _e( 'Default longitude', GMOP_TD ); ?></span></h3>
 					<div class="inside">
 						<input type="text" name="gmop_default_longitude" id="gmop_default_longitude" value="<?php echo $gmop_default_longitude; ?>" style="min-width:500px;" />
 						<br />
-						<small><?php _e('Default longitude on add object page.','mnet-gmop') ?></small> 
+						<small><?php _e( 'Default longitude on add object page.', GMOP_TD ); ?></small> 
 					</div><!-- inside ends -->
 				</div><!-- postbox ends -->									
 
@@ -121,7 +121,7 @@ $gmop_default_longitude = get_option('gmop_default_longitude');
 
 				<p class="submit">
 					<span id="autosave"></span>
-					<input type="submit" name="submit" value="<?php _e('Save Options','mnet-gmop') ?>" style="font-weight: bold;" />
+					<input type="submit" name="submit" value="<?php _e( 'Save Options', GMOP_TD ); ?>" style="font-weight: bold;" />
 				</p>				
 			</div><!-- postdiv ends -->
 		</div><!-- poststuff ends -->
