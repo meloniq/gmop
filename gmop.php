@@ -34,6 +34,20 @@ register_activation_hook( plugin_basename( __FILE__ ), 'gmop_activate' );
  */
 load_plugin_textdomain( 'gmop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
+
+/**
+ * Load functions
+ */
+require_once( dirname( __FILE__ ) . '/gmop-functions.php' );
+
+
+/**
+ * Register custom tables
+ */
+gmop_register_table( 'gmop_markers' );
+gmop_register_table( 'gmop_objects' );
+
+
 /**
  * Initialize admin menu, shortcode, styles, scripts
  */
@@ -121,13 +135,26 @@ function gmop_menu_overview_page() {
 
 
 /**
- * Create GMOP main page content
+ * Action on plugin activate
  */
 function gmop_activate() {
-	include_once( dirname( __FILE__ ) . '/admin/main_install.php' );
-	gmop_install_tables();
+
+	gmop_tables_install();
+
+	$previous_version = get_option('gmop_version');
+
+	if ( ! $previous_version ) {
+		// add sample data
+		gmop_populate_tables();
+
+		update_option( 'gmop_api_key', '' );
+		update_option( 'gmop_gmaps_loc', 'http://maps.google.pl' );
+		update_option( 'gmop_default_latitude', '52.234528294213646' );
+		update_option( 'gmop_default_longitude', '21.005859375' );
+	}
 }
-		
+
+
 /**
  * Create GMOP map
  */
