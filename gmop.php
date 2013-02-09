@@ -22,25 +22,6 @@ define('GMOP_VERSION', '1.0.0');
 $gmop_dbversion = '100';
 // Init options & tables during activation & deregister init option
 register_activation_hook( plugin_basename(__FILE__), 'gmop_activate' );
-
-/* PLUGIN and WP-CONTENT directory constants if not already defined */
-if ( ! defined( 'WP_PLUGIN_URL' ) )
-	define( 'WP_PLUGIN_URL', WP_CONTENT_URL. '/plugins' );
-if ( ! defined( 'WP_PLUGIN_DIR' ) )
-	define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
-if ( ! defined( 'WP_CONTENT_URL' ) )
-	define( 'WP_CONTENT_URL', get_option( 'siteurl' ) . '/wp-content' );
-if ( ! defined( 'WP_CONTENT_DIR' ) )
-	define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
-
-if ( ! defined( 'GMOP_PLUGIN_BASENAME' ) )
-	define( 'GMOP_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
-if ( ! defined( 'GMOP_PLUGIN_NAME' ) )
-	define( 'GMOP_PLUGIN_NAME', trim( dirname( GMOP_PLUGIN_BASENAME ), '/' ) );
-if ( ! defined( 'GMOP_PLUGIN_DIR' ) )
-	define( 'GMOP_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . GMOP_PLUGIN_NAME );
-if ( ! defined( 'GMOP_PLUGIN_URL' ) )
-	define( 'GMOP_PLUGIN_URL', WP_PLUGIN_URL . '/' . GMOP_PLUGIN_NAME );
 	
 	
 /**
@@ -114,13 +95,13 @@ function gmop_shortcode(	) {
 function gmop_add_menu_links() {
 	global $wp_version, $_registered_pages;
 	add_menu_page( __('GMOP Overview', 'mnet-gmop'),__('GMOP', 'mnet-gmop'), 'activate_plugins', 'gmop_main', 'gmop_menu_overview_page'	);
-	add_submenu_page('gmop_main', __('Objects', 'mnet-gmop'), __('Objects', 'mnet-gmop'), 'administrator', GMOP_PLUGIN_NAME.'/admin/object_manage.php');
-	add_submenu_page('gmop_main', __('Object Types', 'mnet-gmop'), __('Object Types', 'mnet-gmop'), 'administrator', GMOP_PLUGIN_NAME.'/admin/object_type_manage.php');
-	add_submenu_page('gmop_main', __('Settings', 'mnet-gmop'), __('Settings', 'mnet-gmop'), 'administrator', GMOP_PLUGIN_NAME.'/admin/main_options.php');
+	add_submenu_page('gmop_main', __('Objects', 'mnet-gmop'), __('Objects', 'mnet-gmop'), 'administrator', '/admin/object_manage.php');
+	add_submenu_page('gmop_main', __('Object Types', 'mnet-gmop'), __('Object Types', 'mnet-gmop'), 'administrator', '/admin/object_type_manage.php');
+	add_submenu_page('gmop_main', __('Settings', 'mnet-gmop'), __('Settings', 'mnet-gmop'), 'administrator', '/admin/main_options.php');
 			// Register the pages to WP
 	$code_pages = array('object_manage.php','object_type_manage.php', 'main_options.php');
 	foreach($code_pages as $code_page) {
-		$hookname = get_plugin_page_hookname(GMOP_PLUGIN_NAME.'/admin/'.$code_page, '' );
+		$hookname = get_plugin_page_hookname('/admin/'.$code_page, '' );
 		$_registered_pages[$hookname] = true;
 	}	 
 }

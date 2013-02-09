@@ -21,13 +21,13 @@ function gmop_object_type_show(){
 	$typetable_name = $wpdb->prefix . "gmop_markers";
 ?>
 	<div class="wrap">
-		<h2><?php _e('GMOP Object Types','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=add'; ?>" class="button add-new-h2"><?php _e('Add New','mnet-gmop'); ?></a></h2>
+		<h2><?php _e('GMOP Object Types','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_type_manage.php&gmopaction=add'; ?>" class="button add-new-h2"><?php _e('Add New','mnet-gmop'); ?></a></h2>
 		<p class="admin-msg"><?php _e('Below You will find a list of already created object types (markers), which can be used to mark some objects on google map.','mnet-gmop'); ?></p>
 <?php
 	//Handle deleting
 	if ($_GET['gmopaction'] == "delete") {
 		$theid = $_GET['theid'];
-		echo '<div id="message" class="updated fade"><p>'.__('Are you sure you want to delete object type?', 'mnet-gmop').' <a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=deleteconf&theid='.$theid.'">'.__('Yes', 'mnet-gmop').'</a> &nbsp; <a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php">'.__('No!', 'mnet-gmop').'</a></p></div>';
+		echo '<div id="message" class="updated fade"><p>'.__('Are you sure you want to delete object type?', 'mnet-gmop').' <a href="admin.php?page=/admin/object_type_manage.php&gmopaction=deleteconf&theid='.$theid.'">'.__('Yes', 'mnet-gmop').'</a> &nbsp; <a href="admin.php?page=/admin/object_type_manage.php">'.__('No!', 'mnet-gmop').'</a></p></div>';
 	}
 	if ($_GET['gmopaction'] == "deleteconf") {
 		$theid = $_GET['theid'];
@@ -65,8 +65,8 @@ function gmop_object_type_show(){
 			echo '<td>' . $gmoptype->ID . '</td>';
 			echo '<td><strong>' . $gmoptype->title . '</strong></td>';
 			echo '<td><img src="' . $gmoptype->image_url . '" /></td>';
-			echo '<td><a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=moveup&theid='.$gmoptype->ID.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_up.gif" title="'.__('Move Up', 'mnet-gmop').'" alt="'.__('Move Up', 'mnet-gmop').'" /></a>	<a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=movedown&theid='.$gmoptype->ID.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_down.gif" title="'.__('Move Down', 'mnet-gmop').'" alt="'.__('Move Down', 'mnet-gmop').'" /></a></td>';
-			echo '<td><a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=edit&theid='.$gmoptype->ID.'"><img src="'.GMOP_PLUGIN_URL.'/img/edit.png" title="'.__('Edit', 'mnet-gmop').'" alt="'.__('Edit', 'mnet-gmop').'" /></a>	<a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=delete&theid='.$gmoptype->ID.'"><img src="'.GMOP_PLUGIN_URL.'/img/delete.png" title="'.__('Delete', 'mnet-gmop').'" alt="'.__('Delete', 'mnet-gmop').'" /></a></td>';
+			echo '<td><a href="admin.php?page=/admin/object_type_manage.php&gmopaction=moveup&theid='.$gmoptype->ID.'"><img src="/img/link_up.gif" title="'.__('Move Up', 'mnet-gmop').'" alt="'.__('Move Up', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_type_manage.php&gmopaction=movedown&theid='.$gmoptype->ID.'"><img src="/img/link_down.gif" title="'.__('Move Down', 'mnet-gmop').'" alt="'.__('Move Down', 'mnet-gmop').'" /></a></td>';
+			echo '<td><a href="admin.php?page=/admin/object_type_manage.php&gmopaction=edit&theid='.$gmoptype->ID.'"><img src="/img/edit.png" title="'.__('Edit', 'mnet-gmop').'" alt="'.__('Edit', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_type_manage.php&gmopaction=delete&theid='.$gmoptype->ID.'"><img src="/img/delete.png" title="'.__('Delete', 'mnet-gmop').'" alt="'.__('Delete', 'mnet-gmop').'" /></a></td>';
 			echo '</tr>';
 		}
 	} else { 
@@ -123,10 +123,10 @@ jQuery(function() {
 });	
 </script>
 	<div class="wrap">
-		<h2><?php _e('GMOP Add Object Type','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Object Types','mnet-gmop'); ?></a></h2>
+		<h2><?php _e('GMOP Add Object Type','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_type_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Object Types','mnet-gmop'); ?></a></h2>
 		<p class="admin-msg"><?php _e('Below You can create new object type (marker), which can be used to mark some objects on google map.','mnet-gmop'); ?></p>
 
-		<form method="post" action="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=add'; ?>" enctype="multipart/form-data">
+		<form method="post" action="<?php echo 'admin.php?page=/admin/object_type_manage.php&gmopaction=add'; ?>" enctype="multipart/form-data">
 		<table class="widefat">
 			<thead>
 				<tr>
@@ -205,10 +205,10 @@ jQuery(function() {
 });	
 </script>
 	<div class="wrap">
-		<h2><?php _e('GMOP Edit Object Type','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Object Types','mnet-gmop'); ?></a></h2>
+		<h2><?php _e('GMOP Edit Object Type','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_type_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Object Types','mnet-gmop'); ?></a></h2>
 		<p class="admin-msg"><?php _e('Below You can edit already created object type (marker), which can be used to mark some objects on google map.','mnet-gmop'); ?></p>
 
-		<form method="post" action="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_type_manage.php&gmopaction=edit&theid='.$theid.''; ?>" enctype="multipart/form-data">
+		<form method="post" action="<?php echo 'admin.php?page=/admin/object_type_manage.php&gmopaction=edit&theid='.$theid.''; ?>" enctype="multipart/form-data">
 		<input name="gmop_theid" type="hidden" id="gmop_theid" value="<?php echo $gmoptype->ID; ?>" />
 		<table class="widefat">
 			<thead>

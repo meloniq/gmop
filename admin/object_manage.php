@@ -47,7 +47,7 @@ function gmop_object_show(){
 		$pmax = $pageno * $itemsonpage;
 	}
 
-	$linkparam = 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php';
+	$linkparam = 'admin.php?page=/admin/object_manage.php';
 	if(isset($_GET['gmopsort'])){
 		$linkparam .= '&gmopsort='.$_GET['gmopsort'];
 	}
@@ -68,15 +68,15 @@ function gmop_object_show(){
 	}
 ?>
 	<div class="wrap">
-		<h2><?php _e('GMOP Objects','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopaction=add'; ?>" class="button add-new-h2"><?php _e('Add New','mnet-gmop'); ?></a>
-		&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopaction=regenerate'; ?>" class="button add-new-h2"><?php _e('ReGenerate Cache','mnet-gmop'); ?></a></h2>
+		<h2><?php _e('GMOP Objects','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=add'; ?>" class="button add-new-h2"><?php _e('Add New','mnet-gmop'); ?></a>
+		&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=regenerate'; ?>" class="button add-new-h2"><?php _e('ReGenerate Cache','mnet-gmop'); ?></a></h2>
 		<p class="admin-msg"><?php _e('Below You will find a list of already created objects, which can be show on google map.','mnet-gmop'); ?></p>
 		<p><?php _e('Page:','mnet-gmop'); ?>&nbsp;<?php echo $pagination; ?></p>
 <?php
 	//Handle deleting
 	if ($_GET['gmopaction'] == "delete") {
 		$theid = $_GET['theid'];
-		echo '<div id="message" class="updated fade"><p>'.__('Are you sure you want to delete object?', 'mnet-gmop').' <a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopaction=deleteconf&theid='.$theid.'">'.__('Yes', 'mnet-gmop').'</a> &nbsp; <a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php">'.__('No!', 'mnet-gmop').'</a></p></div>';
+		echo '<div id="message" class="updated fade"><p>'.__('Are you sure you want to delete object?', 'mnet-gmop').' <a href="admin.php?page=/admin/object_manage.php&gmopaction=deleteconf&theid='.$theid.'">'.__('Yes', 'mnet-gmop').'</a> &nbsp; <a href="admin.php?page=/admin/object_manage.php">'.__('No!', 'mnet-gmop').'</a></p></div>';
 	}
 	if ($_GET['gmopaction'] == "deleteconf") {
 		$theid = $_GET['theid'];
@@ -90,11 +90,11 @@ function gmop_object_show(){
 	echo '
 	<table class="widefat">
 		<thead><tr>
-			<th scope="col">' . __('ID', 'mnet-gmop') . ' <a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopsort=asc&gmopsortby=ID&pageno='.$pageno.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopsort=desc&gmopsortby=ID&pageno='.$pageno.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
-			<th scope="col">' . __('Name', 'mnet-gmop') . ' <a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopsort=asc&gmopsortby=title&pageno='.$pageno.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopsort=desc&gmopsortby=title&pageno='.$pageno.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
+			<th scope="col">' . __('ID', 'mnet-gmop') . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=ID&pageno='.$pageno.'"><img src="/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=ID&pageno='.$pageno.'"><img src="/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
+			<th scope="col">' . __('Name', 'mnet-gmop') . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=title&pageno='.$pageno.'"><img src="/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=title&pageno='.$pageno.'"><img src="/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
 			<th scope="col" style="width:300px;">' . __('Description', 'mnet-gmop') . '</th>
 			<th scope="col">' . __('URL', 'mnet-gmop') . '</th>
-			<th scope="col">' . __('Marker', 'mnet-gmop') . ' <a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopsort=asc&gmopsortby=marker&pageno='.$pageno.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopsort=desc&gmopsortby=marker&pageno='.$pageno.'"><img src="'.GMOP_PLUGIN_URL.'/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
+			<th scope="col">' . __('Marker', 'mnet-gmop') . ' <a href="admin.php?page=/admin/object_manage.php&gmopsort=asc&gmopsortby=marker&pageno='.$pageno.'"><img src="/img/link_up.gif" title="'.__('Ascending', 'mnet-gmop').'" alt="'.__('Ascending', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopsort=desc&gmopsortby=marker&pageno='.$pageno.'"><img src="/img/link_down.gif" title="'.__('Descending', 'mnet-gmop').'" alt="'.__('Descending', 'mnet-gmop').'" /></a></th>
 			<th scope="col">' . __('Action', 'mnet-gmop') . '</th>
 		</tr></thead>
 		<tbody>';
@@ -108,7 +108,7 @@ function gmop_object_show(){
 			echo '<td>' . $gmopobject->url . '</td>';
 			$markerid = $gmopobject->marker;
 			echo '<td><img src="' . $gmoptypes[$markerid]->image_url . '" /><br />' . $gmoptypes[$markerid]->title . '</td>';
-			echo '<td><a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopaction=edit&theid='.$gmopobject->ID.'"><img src="'.GMOP_PLUGIN_URL.'/img/edit.png" title="'.__('Edit', 'mnet-gmop').'" alt="'.__('Edit', 'mnet-gmop').'" /></a>	<a href="admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopaction=delete&theid='.$gmopobject->ID.'"><img src="'.GMOP_PLUGIN_URL.'/img/delete.png" title="'.__('Delete', 'mnet-gmop').'" alt="'.__('Delete', 'mnet-gmop').'" /></a></td>';
+			echo '<td><a href="admin.php?page=/admin/object_manage.php&gmopaction=edit&theid='.$gmopobject->ID.'"><img src="/img/edit.png" title="'.__('Edit', 'mnet-gmop').'" alt="'.__('Edit', 'mnet-gmop').'" /></a>	<a href="admin.php?page=/admin/object_manage.php&gmopaction=delete&theid='.$gmopobject->ID.'"><img src="/img/delete.png" title="'.__('Delete', 'mnet-gmop').'" alt="'.__('Delete', 'mnet-gmop').'" /></a></td>';
 			echo '</tr>';
 		}
 	} else { 
@@ -294,10 +294,10 @@ div#gmop_map {
 }
 </style>
 	<div class="wrap">
-		<h2><?php _e('GMOP Add New Object','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
+		<h2><?php _e('GMOP Add New Object','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
 		<p class="admin-msg"><?php _e('Below You can create new object, which can be show on google map.','mnet-gmop'); ?></p>
 
-		<form method="post" action="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopaction=add'; ?>" enctype="multipart/form-data" name="storageform" id="storageform" >
+		<form method="post" action="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=add'; ?>" enctype="multipart/form-data" name="storageform" id="storageform" >
 		<table class="widefat">
 			<thead>
 				<tr>
@@ -541,10 +541,10 @@ div#gmop_map {
 }
 </style>
 	<div class="wrap">
-		<h2><?php _e('GMOP Edit Object','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
+		<h2><?php _e('GMOP Edit Object','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
 		<p class="admin-msg"><?php _e('Below You can edit object, which can be show on google map.','mnet-gmop'); ?></p>
 
-		<form method="post" action="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php&gmopaction=edit&theid='.$theid.''; ?>" enctype="multipart/form-data" name="storageform" id="storageform" >
+		<form method="post" action="<?php echo 'admin.php?page=/admin/object_manage.php&gmopaction=edit&theid='.$theid.''; ?>" enctype="multipart/form-data" name="storageform" id="storageform" >
 		<input name="gmop_theid" type="hidden" id="gmop_theid" value="<?php echo $gmopobject->ID; ?>" />
 		<table class="widefat">
 			<thead>
@@ -633,13 +633,13 @@ function gmop_object_regenerate(){
 
 ?>
 	<div class="wrap">
-		<h2><?php _e('GMOP ReGenerate Objects Cache','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page='.GMOP_PLUGIN_NAME.'/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
+		<h2><?php _e('GMOP ReGenerate Objects Cache','mnet-gmop'); ?>&nbsp;<a href="<?php echo 'admin.php?page=/admin/object_manage.php'; ?>" class="button add-new-h2"><?php _e('Show Objects','mnet-gmop'); ?></a></h2>
 		<p class="admin-msg"><?php _e('Please wait, generating cache of objects in progress...','mnet-gmop'); ?></p>
 <?php
 
 	$gmopcount_total = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $objecttable_name;"));
 	$gmopobjects = $wpdb->get_results("SELECT * FROM $objecttable_name ORDER BY ID ASC", OBJECT);
-	$gmopfilename = GMOP_PLUGIN_DIR . '/cache/data.json';
+	$gmopfilename = '/cache/data.json';
 
 	if ($gmopobjects) {
 		$gmopcontent = 'var data = { "count": ' . $gmopcount_total . ', "objects": [ ';
