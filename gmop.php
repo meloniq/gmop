@@ -8,11 +8,13 @@
 	Author URI: http://blog.meloniq.net
 */
 
-// Avoid calling page directly
-if (eregi(basename(__FILE__),$_SERVER['PHP_SELF'])) {
-	echo "Whoops! You shouldn't be doing that.";
-	exit;
-}
+
+/**
+ * Avoid calling file directly
+ */
+if ( ! function_exists( 'add_action' ) )
+	die( 'Whoops! You shouldn\'t be doing that.' );
+
 
 global $gmop_dbversion;
 $gmop_version = '1.0.0';
@@ -50,40 +52,53 @@ load_plugin_textdomain( 'gmop', false, dirname( plugin_basename( __FILE__ ) ) . 
  * Initialize admin menu, shortcode, styles, scripts
  */
 if ( is_admin() ) {	
-	add_action('admin_menu', 'gmop_add_menu_links');
-	add_action('admin_enqueue_scripts', 'gmop_load_admin_scripts');			
+	add_action( 'admin_menu', 'gmop_add_menu_links' );
 } else {
-	add_shortcode('GMOP', 'gmop_shortcode');			
-	add_action('wp_print_styles', 'gmop_load_styles');
-	add_action('wp_head', 'gmop_load_scripts');
-	// Add a author to the header
-	add_action('wp_head', create_function('', 'echo "\n<meta name=\'Google Maps Objects Plus\' content=\'http://www.meloniq.net\' />\n";') );
+	add_shortcode( 'GMOP', 'gmop_shortcode' );			
 }
 
+
 /**
- * Load scripts
+ * Load front-end scripts
  */
 function gmop_load_scripts() {
-	wp_enqueue_script('jquery');
-//	wp_enqueue_script('jquery-ui-tabs');
-	wp_enqueue_script('gmop_js', plugins_url(GMOP_PLUGIN_NAME.'/js/script.js'), array('jquery'), '2.50', true);
-	wp_print_scripts('gmop_js');
+	wp_enqueue_script( 'gmop_js', plugins_url( '/js/script.js', __FILE__ ), array( 'jquery' ) );
+	wp_print_scripts( 'gmop_js' );
 }		
+add_action( 'wp_print_scripts', 'gmop_load_scripts' );
 
-function gmop_load_admin_scripts() {
-	wp_enqueue_script('jquery-ui-tabs');
-	wp_enqueue_script('media-upload'); // needed for image upload
-	wp_enqueue_script('thickbox'); // needed for image upload
-	wp_enqueue_style('thickbox'); // needed for image upload
-}
 
 /**
- * Load styles
+ * Load back-end scripts
+ */
+function gmop_load_admin_scripts() {
+	wp_enqueue_script( 'jquery-ui-tabs' );
+	// needed for image upload
+	wp_enqueue_script( 'media-upload' );
+	wp_enqueue_script( 'thickbox' );
+}
+add_action( 'admin_enqueue_scripts', 'gmop_load_admin_scripts' );
+
+
+/**
+ * Load front-end styles
  */
 function gmop_load_styles() {
-	wp_register_style('GMOP_Plugin_Style', plugins_url(GMOP_PLUGIN_NAME.'/style.css'));
-	wp_enqueue_style('GMOP_Plugin_Style');	
+	wp_register_style( 'gmop_style', plugins_url( 'style.css', __FILE__ ) );
+	wp_enqueue_style( 'gmop_style' );	
 }		
+add_action( 'wp_print_styles', 'gmop_load_styles' );
+
+
+/**
+ * Load back-end styles
+ */
+function gmop_load_admin_styles() {
+	// needed for image upload
+	wp_enqueue_style( 'thickbox' );
+}
+add_action( 'admin_enqueue_scripts', 'gmop_load_admin_styles' );
+
 
 /**
  * Replace shortcode
@@ -91,6 +106,7 @@ function gmop_load_styles() {
 function gmop_shortcode(	) {
 //TODO
 }
+
 
 /**
  * Populate administration menu of the plugin
@@ -174,8 +190,8 @@ function gmop_map($postid, $base_address, $base_title) {
 		$gmoptypes = $wpdb->get_results("SELECT * FROM $typetable_name ORDER BY priority DESC", OBJECT);
 
 		echo '<script src="'.$gmop_gmaps_loc.'/maps?file=api&amp;v=3&amp;key='.$gmop_api_key.'" type="text/javascript"></script>';
-		echo '<script src="'.plugins_url(GMOP_PLUGIN_NAME.'/js/markerclusterer_packed.js').'" type="text/javascript"></script>';
-		echo '<script src="'.plugins_url(GMOP_PLUGIN_NAME.'/cache/data.json').'" type="text/javascript"></script>';
+		echo '<script src="'.plugins_url( '/js/markerclusterer_packed.js', __FILE__ ).'" type="text/javascript"></script>';
+		echo '<script src="'.plugins_url( '/cache/data.json', __FILE__ ).'" type="text/javascript"></script>';
 		echo '';
 ?>
 <div id="gmop_control">
