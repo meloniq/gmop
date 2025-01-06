@@ -1,10 +1,10 @@
 === GMOP Google Maps Objects Plus ===
 Contributors: meloniq
-Donate link: http://blog.meloniq.net/donate/
+Donate link: https://blog.meloniq.net/donate/
 Tags: google maps, objects, markers, distance
-Requires at least: 3.3
-Tested up to: 3.5.1
-Stable tag: 1.0
+Requires at least: 4.9
+Tested up to: 6.7
+Stable tag: 1.1
 
 Showing maps based on location saved in post meta with closest objects definied in administration panel.
 
@@ -21,7 +21,7 @@ Showing maps based on location saved in post meta with closest objects definied 
 == Changelog ==
 
 = 1.1 =
-* Changed to use Google Maps API v3 ?!
+* Rewritten admin pages
 
 = 1.0 =
 * Initial release
@@ -33,7 +33,7 @@ Showing maps based on location saved in post meta with closest objects definied 
 
 = Plugin doesn't work for me, what to do? =
 
-Report it with details on <a href="http://wordpress.org/tags/gmop">support forum</a>.
+Report it with details on <a href="https://wordpress.org/tags/gmop">support forum</a>.
 
 
 == Screenshots ==
