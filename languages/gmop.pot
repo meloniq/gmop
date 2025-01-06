@@ -1,545 +1,474 @@
 # Copyright (C) 2025 MELONIQ.NET
 # This file is distributed under the same license as the GMOP package.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: GMOP 1.1\n"
 "Report-Msgid-Bugs-To: https://blog.meloniq.net/\n"
 "POT-Creation-Date: 2025-01-06 19:36+0100\n"
-"PO-Revision-Date: 2025-01-06 19:37+0100\n"
-"Last-Translator: MELONIQ.NET <biuro@meloniq.net>\n"
-"Language-Team: https://www.meloniq.net\n"
-"Language: pl\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.5\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_nx:1,2;_x:1,2c;_ex:1,2c;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:1,2,3c\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_nx:1,2;_x:1,2c;_ex:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:1,2,3c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../gmop-functions.php:157
 msgid "Address not found!"
-msgstr "Nie znaleziono adresu!"
+msgstr ""
 
 #: ../gmop-functions.php:200
 msgid "Sorry, Google Maps API is not compatible with Your Web Browser"
-msgstr "Przepraszamy, Google Maps API nie jest zgodne z twoją przeglądarką"
+msgstr ""
 
 #: ../gmop-functions.php:209
 msgid "Nearby objects"
-msgstr "Najbliższe obiekty"
+msgstr ""
 
 #: ../gmop-functions.php:239
 msgid "Object name"
-msgstr "Nazwa obiektu"
+msgstr ""
 
 #: ../gmop-functions.php:239
 msgid "Distance"
-msgstr "Odległość"
+msgstr ""
 
 #: ../gmop-functions.php:251
 msgid "No objects found."
-msgstr "Nie znaleziono obiektów."
+msgstr ""
 
 #: ../src/class-install.php:134 ../src/class-install.php:151
 msgid "Primary school"
-msgstr "Szkoła podstawowa"
+msgstr ""
 
 #: ../src/class-install.php:139
 msgid "Middle school"
-msgstr "Szkoła średnia"
+msgstr ""
 
 #: ../src/class-install.php:144
 msgid "High school"
-msgstr "Szkoła wyższa"
+msgstr ""
 
 #: ../src/class-install.php:160
 msgid "General secondary school"
-msgstr "Liceum ogólnokształcące"
+msgstr ""
 
 #: ../src/class-install.php:169
 msgid "Higher school of Journalism"
-msgstr "Wyższa szkoła dziennikarstwa"
+msgstr ""
 
 #: ../src/class-object-add.php:27
 msgid "GMOP Add New Object"
-msgstr "GMOP Dodaj nowy obiekt"
+msgstr ""
 
 #: ../src/class-object-add.php:27 ../src/class-object-edit.php:24
 msgid "Show Objects"
-msgstr "Pokaż obiekty"
+msgstr ""
 
 #: ../src/class-object-add.php:28
 msgid "Below You can create new object, which can be show on google map."
 msgstr ""
-"Poniżej możesz utworzyć nowy obiekt, który może zostać pokazany namapie "
-"google."
 
 #: ../src/class-object-add.php:34 ../src/class-object-add.php:88
 msgid "Add New Object"
-msgstr "Dodaj nowy obiekt"
+msgstr ""
 
 #: ../src/class-object-add.php:40 ../src/class-object-edit.php:122
 #: ../src/class-object-list.php:118 ../src/class-object-type-add.php:38
 #: ../src/class-object-type-edit.php:59 ../src/class-object-type-list.php:145
 msgid "Name"
-msgstr "Nazwa"
+msgstr ""
 
 #: ../src/class-object-add.php:42 ../src/class-object-edit.php:124
 msgid "Give a name to this object (eg. Primary School no 112)."
-msgstr "Nadaj nazwę temu obiektowi (np. Szkoła podstawowa nr 112)."
+msgstr ""
 
 #: ../src/class-object-add.php:45 ../src/class-object-edit.php:127
 #: ../src/class-object-list.php:119
 msgid "Description"
-msgstr "Opis"
+msgstr ""
 
 #: ../src/class-object-add.php:47 ../src/class-object-edit.php:129
 msgid "Describe this object, write something more about it."
-msgstr "Opisz ten obiekt, napisz o nim coś więcej."
+msgstr ""
 
 #: ../src/class-object-add.php:50 ../src/class-object-edit.php:132
 msgid "Destination URL"
-msgstr "URL strony"
+msgstr ""
 
 #: ../src/class-object-add.php:52 ../src/class-object-edit.php:134
-msgid ""
-"Provide a URL to website where user may find more information about this "
-"object."
+msgid "Provide a URL to website where user may find more information about this object."
 msgstr ""
-"Wstaw URL strony gdzie użytkownik może znaleźć więcej informacji o tym "
-"obiekcie."
 
 #: ../src/class-object-add.php:55 ../src/class-object-edit.php:137
 msgid "Latitude"
-msgstr "Latitude"
+msgstr ""
 
 #: ../src/class-object-add.php:57 ../src/class-object-edit.php:139
 msgid "Type here latitude of object or mark point on below map."
-msgstr "Wpisz tutaj latitude obiektu lub zaznacz punkt na mapie poniżej."
+msgstr ""
 
 #: ../src/class-object-add.php:60 ../src/class-object-edit.php:142
 msgid "Longitude"
-msgstr "Longitude"
+msgstr ""
 
 #: ../src/class-object-add.php:62 ../src/class-object-edit.php:144
 msgid "Type here longitude of object or mark point on below map."
-msgstr "Wpisz tutaj longitude obiektu lub zaznacz punkt na mapie poniżej."
+msgstr ""
 
 #: ../src/class-object-add.php:65 ../src/class-object-edit.php:147
 msgid "Object type/Marker"
-msgstr "Typ obiektu/Marker"
+msgstr ""
 
 #: ../src/class-object-add.php:80 ../src/class-object-edit.php:163
 msgid "No object types found. Create some first"
-msgstr "Nie znaleziono obiektów. Utwórz jakieś najpierw"
+msgstr ""
 
 #: ../src/class-object-add.php:83 ../src/class-object-edit.php:166
 msgid "Choose one of available object types (markers)."
-msgstr "Wybierz jeden z dostępnych typów obiektów (markerów)."
+msgstr ""
 
 #: ../src/class-object-add.php:122
 msgid "New object created."
-msgstr "Nowy obiekt utworzony."
+msgstr ""
 
 #: ../src/class-object-add.php:124
 msgid "New object was not created!"
-msgstr "Nowy obiekt nie został utworzony!"
+msgstr ""
 
 #: ../src/class-object-add.php:187 ../src/class-object-edit.php:220
 msgid "Move marker"
-msgstr "Przesuń marker"
+msgstr ""
 
 #: ../src/class-object-add.php:187 ../src/class-object-edit.php:220
 msgid "Move this marker to right place"
-msgstr "Przesuń ten marker w odpowiednie miejsce"
+msgstr ""
 
 #: ../src/class-object-cache.php:22
 msgid "GMOP ReGenerate Objects Cache"
-msgstr "GMOP Ponowne generowanie Cache obiektów"
+msgstr ""
 
 #: ../src/class-object-cache.php:23
 msgid "Please wait, generating cache of objects in progress..."
-msgstr "Proszę czekać, trwa generowanie Cache obiektów..."
+msgstr ""
 
 #: ../src/class-object-cache.php:25
 msgid "Cache was updated!"
-msgstr "Cache został zaktualizowany!"
+msgstr ""
 
 #: ../src/class-object-cache.php:28
 msgid "Cache was not updated! No objects found!"
-msgstr "Cache nie został zaktualizowany! Nie znaleziono obiektów!"
+msgstr ""
 
 #: ../src/class-object-edit.php:24
 msgid "GMOP Edit Object"
-msgstr "GMOP Edytuj obiekt"
+msgstr ""
 
 #: ../src/class-object-edit.php:25
 msgid "Below You can edit object, which can be show on google map."
 msgstr ""
-"Poniżej możesz wyedytować obiekt, który może zostać pokazany na mapie google."
 
 #: ../src/class-object-edit.php:34
 msgid "Object not found!"
-msgstr "Nie znaleziono obiektu!"
+msgstr ""
 
 #: ../src/class-object-edit.php:65
 msgid "Object updated."
-msgstr "Obiekt zaktualizowany."
+msgstr ""
 
 #: ../src/class-object-edit.php:67
 msgid "Object was not updated."
-msgstr "Obiekt nie został zaktualizowany."
+msgstr ""
 
 #: ../src/class-object-edit.php:116
 msgid "Edit Object"
-msgstr "Edytuj obiekt"
+msgstr ""
 
 #: ../src/class-object-edit.php:171
 msgid "Update Object"
-msgstr "Aktualizuj obiekt"
+msgstr ""
 
 #: ../src/class-object-list.php:26
 msgid "GMOP Objects"
-msgstr "GMOP Obiekty"
+msgstr ""
 
 #: ../src/class-object-list.php:26 ../src/class-object-type-list.php:26
 msgid "Add New"
-msgstr "Dodaj nowy"
+msgstr ""
 
 #: ../src/class-object-list.php:27
 msgid "ReGenerate Cache"
-msgstr "Wygeneruj ponownie Cache"
+msgstr ""
 
 #: ../src/class-object-list.php:28
-msgid ""
-"Below You will find a list of already created objects, which can be show on "
-"google map."
+msgid "Below You will find a list of already created objects, which can be show on google map."
 msgstr ""
-"Poniżej znajdziesz listę utworzonych obiektów, które mogą zostać pokazane na "
-"mapie google."
 
 #: ../src/class-object-list.php:38
 msgid "No objects found!"
-msgstr "Nie znaleziono obiektów!"
+msgstr ""
 
 #: ../src/class-object-list.php:82
 msgid "Object deleted."
-msgstr "Obiekt usunięty."
+msgstr ""
 
 #: ../src/class-object-list.php:86 ../src/class-object-type-list.php:87
 msgid "Yes"
-msgstr "Tak"
+msgstr ""
 
 #: ../src/class-object-list.php:86 ../src/class-object-type-list.php:87
 msgid "No!"
-msgstr "Nie!"
+msgstr ""
 
 #: ../src/class-object-list.php:87
 msgid "Are you sure you want to delete object?"
-msgstr "Czy jesteś pewien że chcesz usunąć obiekt?"
+msgstr ""
 
 #: ../src/class-object-list.php:109
 msgid "Ascending"
-msgstr "Rosnąco"
+msgstr ""
 
 #: ../src/class-object-list.php:110
 msgid "Descending"
-msgstr "Malejąco"
+msgstr ""
 
 #: ../src/class-object-list.php:111 ../src/class-object-type-list.php:136
 msgid "Edit"
-msgstr "Edytuj"
+msgstr ""
 
 #: ../src/class-object-list.php:112 ../src/class-object-type-list.php:137
 msgid "Delete"
-msgstr "Usuń"
+msgstr ""
 
 #: ../src/class-object-list.php:117 ../src/class-object-type-list.php:144
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #: ../src/class-object-list.php:120
 msgid "URL"
-msgstr "URL"
+msgstr ""
 
 #: ../src/class-object-list.php:121
 msgid "Marker"
-msgstr "Marker"
+msgstr ""
 
 #: ../src/class-object-list.php:122 ../src/class-object-type-list.php:148
 msgid "Action"
-msgstr "Akcja"
+msgstr ""
 
 #: ../src/class-object-list.php:236
 msgid "Page:"
-msgstr "Strona:"
+msgstr ""
 
 #: ../src/class-object-type-add.php:25
 msgid "GMOP Add Object Type"
-msgstr "GMOP Dodaj typ obiektu"
+msgstr ""
 
 #: ../src/class-object-type-add.php:25 ../src/class-object-type-edit.php:25
 msgid "Show Object Types"
-msgstr "Pokaż typy obiektów"
+msgstr ""
 
 #: ../src/class-object-type-add.php:26
-msgid ""
-"Below You can create new object type (marker), which can be used to mark "
-"some objects on google map."
+msgid "Below You can create new object type (marker), which can be used to mark some objects on google map."
 msgstr ""
-"Poniżej możesz utworzyć nowy typ obiektu (marker), który może zostać użyty "
-"do oznaczania obiektów na mapie google."
 
 #: ../src/class-object-type-add.php:32
 msgid "Add Object Type"
-msgstr "Dodaj typ obiektu"
+msgstr ""
 
 #: ../src/class-object-type-add.php:40 ../src/class-object-type-edit.php:61
 msgid "Give a name to this object type (eg. Bank, School, Library etc.)."
-msgstr "Nadaj nazwę temu typowi obiektów (np. Bank, Szkoła, Biblioteka itp.)."
+msgstr ""
 
 #: ../src/class-object-type-add.php:43 ../src/class-object-type-edit.php:64
 msgid "Image URL"
-msgstr "URL obrazu"
+msgstr ""
 
 #: ../src/class-object-type-add.php:45 ../src/class-object-type-edit.php:66
 msgid "Add Image"
-msgstr "Dodaj obraz"
+msgstr ""
 
 #: ../src/class-object-type-add.php:46 ../src/class-object-type-edit.php:67
 msgid "Upload image or paste image url."
-msgstr "Wgraj obraz lub wklej url obrazu."
+msgstr ""
 
 #: ../src/class-object-type-add.php:51
 msgid "Add New Object Type"
-msgstr "Dodaj nowy typ obiektu"
+msgstr ""
 
 #: ../src/class-object-type-add.php:79
 msgid "New object type created."
-msgstr "Nowy typ obiektu utworzony."
+msgstr ""
 
 #: ../src/class-object-type-add.php:81
 msgid "New object type was not created!"
-msgstr "Nowy typ obiektu nie został utworzony!"
+msgstr ""
 
 #: ../src/class-object-type-edit.php:25
 msgid "GMOP Edit Object Type"
-msgstr "GMOP Edytuj typ obiektu"
+msgstr ""
 
 #: ../src/class-object-type-edit.php:26
-msgid ""
-"Below You can edit already created object type (marker), which can be used "
-"to mark some objects on google map."
+msgid "Below You can edit already created object type (marker), which can be used to mark some objects on google map."
 msgstr ""
-"Poniżej możesz wyedytować już utworzony typ obiektu (marker), który może "
-"zostać użyty do oznaczania obiektów na mapie google."
 
 #: ../src/class-object-type-edit.php:34
 msgid "Object type not found!"
-msgstr "Nie znaleziono typu obiektu!"
+msgstr ""
 
 #: ../src/class-object-type-edit.php:53 ../src/class-object-type-edit.php:72
 msgid "Edit Object Type"
-msgstr "Edytuj typ obiektu"
+msgstr ""
 
 #: ../src/class-object-type-edit.php:100
 msgid "Object type updated."
-msgstr "Typ obiektu zaktualizowany."
+msgstr ""
 
 #: ../src/class-object-type-edit.php:102
 msgid "Object type was not updated!"
-msgstr "Typ obiektu nie został zaktualizowany!"
+msgstr ""
 
 #: ../src/class-object-type-list.php:26
 msgid "GMOP Object Types"
-msgstr "GMOP Typy obiektów"
+msgstr ""
 
 #: ../src/class-object-type-list.php:27
-msgid ""
-"Below You will find a list of already created object types (markers), which "
-"can be used to mark some objects on google map."
+msgid "Below You will find a list of already created object types (markers), which can be used to mark some objects on google map."
 msgstr ""
-"Poniżej znajdziesz listę utworzonych typów obiektów (markerów), które mogą "
-"zostać użyte do oznaczania obiektów na mapie google."
 
 #: ../src/class-object-type-list.php:34
 msgid "No object types found!"
-msgstr "Nie znaleziono typów obiektów!"
+msgstr ""
 
 #: ../src/class-object-type-list.php:83
 msgid "Object type deleted."
-msgstr "Typ obiektu usunięty."
+msgstr ""
 
 #: ../src/class-object-type-list.php:88
 msgid "Are you sure you want to delete object type?"
-msgstr "Czy jesteś pewien że chcesz usunąć typ obiektu?"
+msgstr ""
 
 #: ../src/class-object-type-list.php:107
 msgid "Object type moved up."
-msgstr "Typ obiektu przesunięty na górę."
+msgstr ""
 
 #: ../src/class-object-type-list.php:125
 msgid "Object type moved down."
-msgstr "Typ obiektu przesunięty w dół."
+msgstr ""
 
 #: ../src/class-object-type-list.php:138
 msgid "Move Up"
-msgstr "Przesuń do góry"
+msgstr ""
 
 #: ../src/class-object-type-list.php:139
 msgid "Move Down"
-msgstr "Przesuń w dół"
+msgstr ""
 
 #: ../src/class-object-type-list.php:146
 msgid "Image"
-msgstr "Obraz"
+msgstr ""
 
 #: ../src/class-object-type-list.php:147
 msgid "Order"
-msgstr "Kolejność"
+msgstr ""
 
 #: ../src/class-object-types.php:23 ../src/class-object-types.php:24
 #: ../src/class-object-types.php:45
 msgid "Object Types"
-msgstr "Typy obiektów"
+msgstr ""
 
 #: ../src/class-objects.php:23 ../src/class-objects.php:24
 #: ../src/class-objects.php:46
 msgid "Objects"
-msgstr "Obiekty"
+msgstr ""
 
 #: ../src/class-overview.php:39 ../src/class-overview.php:56
 msgid "GMOP Overview"
-msgstr "GMOP Podsumowanie"
+msgstr ""
 
 #: ../src/class-overview.php:40
 msgid "GMOP"
-msgstr "GMOP"
+msgstr ""
 
 #: ../src/class-overview.php:57
 msgid "How to start using this plugin?"
-msgstr "Jak zacząć używać tej wtyczki?"
+msgstr ""
 
 #: ../src/class-overview.php:58
-msgid ""
-"1) Go to Settings tab and generate new Google Maps API key for Your domain."
+msgid "1) Go to Settings tab and generate new Google Maps API key for Your domain."
 msgstr ""
-"1) Przejdź do zakładki Ustawienia i wygeneruj nowy klucz Google Maps API dla "
-"twojej domeny."
 
 #: ../src/class-overview.php:59
-msgid ""
-"2) Go to Object Types tab. You will find there 3 preinstalled object types, "
-"remove, modify or add new types which You wanna use."
+msgid "2) Go to Object Types tab. You will find there 3 preinstalled object types, remove, modify or add new types which You wanna use."
 msgstr ""
-"2) Przejdź do zakładki Typy obiektów. Znajdziesz tam 3 utworzone typy "
-"obiektów, usuń, wyedytuj lub dodaj nowe typy których chcesz używać."
 
 #: ../src/class-overview.php:60
-msgid ""
-"3) Go to Objects tab. You will find there 3 preinstaled objects, remove, "
-"modify or add new which You wanna show on maps."
+msgid "3) Go to Objects tab. You will find there 3 preinstaled objects, remove, modify or add new which You wanna show on maps."
 msgstr ""
-"3) Przejdź do zakładki Obiekty. Znajdziesz tam 3 utworzone obiekty, usuń, "
-"wyedytuj lub dodaj nowe które chcesz pokazać na mapie."
 
 #: ../src/class-overview.php:61
-msgid ""
-"4) When You will finish with objects, click ReGenerate Cache button in the "
-"top of page. Cache file of objects will be re-generated. <br />Note: cache "
-"folder inside plugin dir MUST have writing permission."
+msgid "4) When You will finish with objects, click ReGenerate Cache button in the top of page. Cache file of objects will be re-generated. <br />Note: cache folder inside plugin dir MUST have writing permission."
 msgstr ""
-"4) Gdy zakończysz z obiektami, kliknij przycisk Ponownie Generuj Cache na "
-"górze strony. Plik Cache z obiektami zostanie ponownie wygenerowany. <br /"
-">Uwaga: folder cache w katalogu wtyczki MUSI posiadać uprawnienia zapisu."
 
 #: ../src/class-overview.php:62
-msgid ""
-"5) Open template file where You wanna include maps (eg. single.php or loop-"
-"single.php) and in prepared place for map add below code:"
+msgid "5) Open template file where You wanna include maps (eg. single.php or loop-single.php) and in prepared place for map add below code:"
 msgstr ""
-"5) Otwórz plik szablonu gdzie chcesz dołączyć mapy (np. single.php lub loop-"
-"single.php) i w przygotowanym miejscu na mapę dodaj poniższy kod:"
 
 #: ../src/class-overview.php:72
-msgid ""
-"By variable $base_address You need to pass address in format \"Street, City, "
-"Postal Code, Country\"."
+msgid "By variable $base_address You need to pass address in format \"Street, City, Postal Code, Country\"."
 msgstr ""
-"Przez zmienną $base_address musisz przekazać adres w formacie \"Ulica, "
-"Miasto, Kod pocztowy, Kraj\"."
 
 #: ../src/class-settings.php:24 ../src/class-settings.php:68
 msgid "GMOP Settings"
-msgstr "GMOP Ustawienia"
+msgstr ""
 
 #: ../src/class-settings.php:25
 msgid "Settings"
-msgstr "Ustawienia"
+msgstr ""
 
 #: ../src/class-settings.php:41
 msgid "Google Maps"
-msgstr "Mapy Google"
+msgstr ""
 
 #: ../src/class-settings.php:86
 msgid "Settings for Google Maps objects."
-msgstr "Ustawienia obiektów map Google."
+msgstr ""
 
 #: ../src/class-settings.php:102 ../src/class-settings.php:113
 msgid "Google Maps API Key"
-msgstr "Klucz API Map Google"
+msgstr ""
 
 #: ../src/class-settings.php:103 ../src/class-settings.php:236
 #, php-format
 msgid "Get free API key for <a href=\"%s\" target=\"_new\">Google Maps</a>."
 msgstr ""
-"Uzyskaj bezpłatny klucz API dla <a href=\"%s\" target=\"_new\">map Google</"
-"a>."
 
 #: ../src/class-settings.php:136 ../src/class-settings.php:147
 msgid "Google Maps Location"
-msgstr "Lokalizacja Map Google"
+msgstr ""
 
 #: ../src/class-settings.php:137 ../src/class-settings.php:255
 msgid "Select the Google Maps Location."
-msgstr "Wybierz lokalizację w mapach Google."
+msgstr ""
 
 #: ../src/class-settings.php:170 ../src/class-settings.php:181
 msgid "Default latitude"
-msgstr "Domyślne latitude"
+msgstr ""
 
 #: ../src/class-settings.php:171 ../src/class-settings.php:270
 msgid "Default latitude on add object page."
-msgstr "Domyślne latitude na stronie dodawania obiektu."
+msgstr ""
 
 #: ../src/class-settings.php:204 ../src/class-settings.php:215
 msgid "Default longitude"
-msgstr "Domyślne longitude"
+msgstr ""
 
 #: ../src/class-settings.php:205 ../src/class-settings.php:285
 msgid "Default longitude on add object page."
-msgstr "Domyślne longitude na stronie dodawania obiektu."
-
-#~ msgid "GMOP Database Version: "
-#~ msgstr "Wersja bazy danych GMOP: "
-
-#~ msgid "GMOP Version: "
-#~ msgstr "Wersja GMOP: "
-
-#~ msgid "Get free API key for"
-#~ msgstr "Pobierz darmowy klucz API dla"
-
-#~ msgid "Options updated"
-#~ msgstr "Opcje zaktualizowane"
-
-#~ msgid "Plugin Info"
-#~ msgstr "Informacje o wtyczce"
-
-#~ msgid "Save Options"
-#~ msgstr "Zapisz opcje"
+msgstr ""
