@@ -3,7 +3,7 @@ Contributors: meloniq
 Donate link: https://blog.meloniq.net/donate/
 Tags: google maps, objects, markers, distance
 Requires at least: 4.9
-Tested up to: 6.7
+Tested up to: 7.0
 Stable tag: 1.1
 
 Showing maps based on location saved in post meta with closest objects definied in administration panel.
